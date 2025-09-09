@@ -14,6 +14,6 @@ pnpm dev
 bun dev
 ```
 
-add .env file:
+add .env file::
 USE_MOCK_SERVICE=false
 
