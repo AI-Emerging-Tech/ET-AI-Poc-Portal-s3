@@ -1,0 +1,39 @@
+{
+  "title": "Claims IDP",
+  "description": "Classification and summarization of multi-page documents using OCR and AI techniques to improve the efficiency and accuracy of claims document processing.",
+  "author": "David Kuhn & Jefferson Nelsson", 
+  "linkDesc": "View Demo",
+  "isExternal": false,
+  "isNew": false,
+  "image": "claims_idp",
+  "isFeatured": true,
+  "categoryTags": ["AI", "Machine Learning", "OCR", "Claims Processing", "Document Analysis", "NLP", "Computer Vision"],
+  "maturityStage": "Demo-Ready",
+  "interactivityLevel": "Interactive",
+  "estimatedExploreTime": "5-10 min",
+  "targetPersonas": ["Claims Adjusters", "Claims Managers", "Underwriters", "Operations Leaders"],
+  "displayPriority": 1,
+  "keyMetrics": {
+    "classificationAccuracy": "90%+", 
+    "processingTimeReduction": "50%",
+    "manualEffortReduction": "65%",
+    "costSavings": "30%"
+  },
+  "businessImpact": {
+    "operational": ["Streamlined workflows", "Accelerated claims processing", "Reduced manual data entry"],
+    "financial": ["Lower operational costs", "Decreased error-related expenses", "Improved resource allocation"],
+    "customer": ["Faster claims resolution", "Enhanced customer satisfaction", "Reduced follow-up inquiries"]
+  },
+  "technicalHighlights": [
+    "Multi-model document classification approach",
+    "Agentic LLM workflow for classification and information extraction",
+    "OCR optimization with image preprocessing techniques",
+    "Page clustering for processing optimization"
+  ],
+  "implementationTimeline": {
+    "proofOfConcept": "2-4 weeks",
+    "pilotDeployment": "1-2 months",
+    "fullImplementation": "3-6 months"
+  },
+  "content": "The Claims Classification PoC demonstrates how AI can be used to automatically classify incoming insurance claims documents and extract key information, addressing the inefficiency and error-prone nature of manual classification.\n\nHow it works:\n\n1. When a new claim document is uploaded, OCR extracts the text while the system analyzes both text and visual elements to determine document type.\n\n2. Three different approaches were validated:\n   - BERT+ResNet: Combined NLP and image analysis (70% accuracy)\n   - LayoutLMv2: Transformer model incorporating document structure (100% accuracy, given the right data)\n   - Agentic LLM workflow: Multi-agent setup with task breakdown (90% accuracy, highly scalable)\n\n3. The system extracts relevant information including policyholder details, claim numbers, and document content using either machine learning or LLM approaches, depending on the document type.\n\n4. For multi-page documents, similar pages are clustered to optimize processing time and improve results.\n\nBusiness Benefits:\n\n- 50%+ reduction in document processing time\n- 90%+ classification accuracy\n- Consistent handling of claims across the organization\n- Better resource allocation based on claim complexity and priority\n- Improved customer experience through faster claims resolution"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "AI powered Customer Support",
+  "description": "This PoC provides a chat interface that uses LlamaIndex for a RAG based chatbot fed with IT Support documents for context.",
+  "author": "Osama", 
+  "linkDesc": "View Demo",
+  "isExternal": false,
+  "isNew": false,
+  "isFeatured": false,
+  "interactivityLevel": "Interactive",
+  "maturityStage": "Demo-Ready",
+  "estimatedExploreTime": "5 min",
+  "targetPersonas": ["Customer Service Representatives", "Sales Representatives", "Client Service Representatives"],
+  "image": "chatbot",
+  "businessImpact": {
+    "operational": [
+      "Reduced time spent searching through documentation",
+      "Consistent messaging about services across the organization",
+      "Improved knowledge sharing and accessibility for all team members"
+    ]
+  },
+  "technicalHighlights": [
+    "Advanced intent detection and context management",
+    "LlamaIndex integration",
+    "Vector database for efficient information retrieval"
+  ],
+  "content": "The Customer Support Chat is the next generation of our RAG based chatbot implementation. It uses advanced intent detection and context management to provide a more accurate and natural conversation experience. Powered by LlamaIndex, it leverages a vector database to store and retrieve information from a knowledge base of IT Support documents."
+}

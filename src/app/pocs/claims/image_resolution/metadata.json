@@ -1,0 +1,30 @@
+{
+  "title": "Image Super Resolution",
+  "description": "This PoC demonstrates two key enhancements using Generative Adversarial Networks (GANs): improving image resolution from low to high and effectively removing motion blur.",
+  "author": "Dheeraj",
+  "linkDesc": "View Demo",
+  "isExternal": false,
+  "isNew": false,
+  "isFeatured": false,
+  "interactivityLevel": "Basic",
+  "maturityStage": "Experiment",
+  "estimatedExploreTime": "5 min",
+  "targetPersonas": ["Claims Adjusters", "Claims Analysts", "Claims Managers"],
+  "image": "claims_idp",
+  "businessImpact": {
+    "operational": [
+      "Streamlined claims assessments",
+      "Improved accuracy of image-based decisions",
+      "Reduced follow-ups and operational costs"
+    ],
+    "customer": [
+      "Faster, more accurate claims resolution",
+      "Improved customer satisfaction"
+    ]
+  },
+  "technicalHighlights": [
+    "Super-resolution and deblurring using GANs",
+    "User uploads image and receives enhanced output"
+  ],
+  "content": "This PoC enables insurance adjusters to convert low-quality or blurred images into high-definition visuals, allowing for faster and more accurate claims assessments. This is enabled by using a Generative Adversarial Network (GAN) to enhance the image resolution and deblurring."
+}

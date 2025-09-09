@@ -1,0 +1,16 @@
+{
+  "title": "AMS Code Automation",
+  "description": "This PoC combined Codebase Review & Analysis, Pull Request Review, Codebase Documentation, Architecture Diagram Analysis and Unit Test Generation using LLMs.",
+  "author": "Jefferson Nelsson",
+  "linkDesc": "View Demo",
+  "isExternal": false,
+  "image": "sdlc",
+  "isFeatured": false,
+  "isNew": false,
+  "categoryTags": ["AI", "Agentic AI", "Codebase Review", "Pull Request Review", "Codebase Documentation", "Architecture Diagram Analysis", "Unit Test Generation"],
+  "maturityStage": "Experiment",
+  "interactivityLevel": "Limited",
+  "estimatedExploreTime": "10-20 min",
+  "targetPersonas": ["Software Engineers", "DevOps Engineers", "QA Engineers"]
+}
+  

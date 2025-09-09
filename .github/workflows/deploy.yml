@@ -1,0 +1,214 @@
+name: static website hosting
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: Which environment to deploy AWS resources for?
+        options:
+          - demo
+          - prod
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20.19.0"
+          cache: "npm"
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          AWS_ACCESS_KEY_ID: ${{ vars.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - name: Copy files to S3 with the AWS CLI
+        run: |
+          aws s3 sync ./out s3://et-ai-poc-portal/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# This pipe line has been created for Protein DevOps Engineer Bootcamp Final project
+# With gratitude to Yunus Yasar who has been dedicated DevOps tutor during the bootcamp.
+# name: Deploy
+
+# on:
+#   push:
+#     branches:
+#       - demo
+#       - prod
+
+# jobs:
+#   deploy:
+#     name: Deploy
+#     runs-on: ubuntu-22.04
+#     needs: [test-lint]
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#       - name: Set vars
+#         run:  |
+#           if [[ $GITHUB_REF == 'refs/heads/prod' ]]; then
+#             echo "prod" > .workspace
+#           else
+#           echo "demo" > .workspace
+#           fi
+#       - name: Push to ECR
+#         env: 
+#           AWS_ACCESS_KEY_ID: ${{ vars.AWS_ACCESS_KEY_ID }}
+#           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#         run: |
+#           aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ vars.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com
+#           docker build --compress -t ${{ vars.ECR_REPO_TOOLS }}:latest .
+#           docker push ${{ vars.ECR_REPO_TOOLS }}:latest
+
+      # secrets: 
+      #   DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
+      #   DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+  
+# variables:      # Variables to be used to pass data to jobs.
+#   IMAGE_NAME: react
+#   TAG_LATEST: $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$IMAGE_NAME:latest
+#   AWS_REGION : eu-central-1
+#   AWS_ACCOUNT_ID : 356079734857
+
+# stages:          # List of stages for jobs, and their order of execution
+#   - build
+#   - test
+#   - image-push
+#   - deploy
+
+build:      # Stage 1: Build the project
+  stage: build
+  image: node
+  script: 
+    - echo "Start building App"
+    - npm install       # Install dependencies
+    - npm run build     # Build the project
+    - echo "Build successfully!"
+  artifacts:
+    paths:
+      - build/    # Path to the build output
+
+    
+  image-push-docker:       # Stage 3-b: Build the docker image and push it to Docker Hub
+  stage: image-push
+  image: docker:latest
+  services: 
+    - name: docker:20.10.17-dind
+  script:
+    - docker build -t react .
+    - docker login -u="${DOCKERHUB_LOGIN}" -p="${DOCKERHUB_PASS}"
+    - docker image tag react:latest ${DOCKERHUB_LOGIN}/react:latest
+    - docker image push ${DOCKERHUB_LOGIN}/react:latest
+    - echo "Contain has been built successfuly and pushed to Docker Hub"
+  dependencies:
+    - test
+
+# # Stage 4-a: Deploy the app to AWS S3
+# s3-deployment: 
+#   stage: deploy
+#   dependencies:
+#     - build
+#   image: python:latest
+#   script:
+#     - echo "deploying app"
+#     - pip install awscli
+#     - aws s3 sync ./build/ s3://protein-bootcamp-prod/ # Deploy the app to AWS S3
+
+# # Stage 4-b-1: Deploy the app to AWS ECS cluster, in this stage with terraform we first validate our terraform files   
+# terraform-validate:
+#   stage: deploy
+#   image:
+#     name: hashicorp/terraform:light
+#     entrypoint:
+#       - '/usr/bin/env'
+#       - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+#   before_script:
+#     - cd ./terraform-ecs-fargate
+#     - export AWS_ACCESS_KEY=${AWS_ACCESS_KEY_ID}
+#     - export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+#     - rm -rf .terraform
+#     - terraform --version
+#     - terraform init
+#   script:
+#     - terraform validate
+
+# # Stage 4-b-2: Deploy the app to AWS ECS cluster, in this stage with terraform we first plan our terraform files and check if everything is okay  
+# terraform-plan:
+#   stage: deploy
+#   image:
+#     name: hashicorp/terraform:light
+#     entrypoint:
+#       - '/usr/bin/env'
+#       - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+#   before_script:
+#       - cd ./terraform-ecs-fargate
+#       - export AWS_ACCESS_KEY=${AWS_ACCESS_KEY_ID}
+#       - export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+#       - rm -rf .terraform
+#       - terraform --version
+#       - terraform init
+#   script:
+#     - terraform plan
+#   dependencies:
+#     - terraform-validate
+
+
+# # Stage 4-b-3: Deploy the app to AWS ECS cluster, in this stage with terraform we apply our terraform files and check if everything was okay in previous step
+# terraform-apply:
+#   stage: deploy
+#   image:
+#     name: hashicorp/terraform:light
+#     entrypoint:
+#       - '/usr/bin/env'
+#       - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+#   before_script:
+#       - cd ./terraform-ecs-fargate
+#       - export AWS_ACCESS_KEY=${AWS_ACCESS_KEY_ID}
+#       - export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+#       - rm -rf .terraform
+#       - terraform --version
+#       - terraform init
+#   script:
+#     - terraform apply -auto-approve
+#   dependencies:
+#     - terraform-plan
+#   when: manual
+
+

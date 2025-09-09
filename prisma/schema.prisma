@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int       @id @default(autoincrement())
+  name          String?
+  email         String    @unique
+  password      String
+  company       String
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  role          Role      @default(VIEWER)
+  status        Status    @default(PENDING)
+  accessLevel   String?   @default("view-only") // e.g., 'full', 'partial', 'view-only'
+  accessStartTime DateTime? // Time of day access starts (can be just time in DB)
+  accessEndTime   DateTime? // Time of day access ends
+  pageAccess    Json?      // Per-page access overrides, e.g., { "/ai_driven_sdlc": "view-only" }
+  sessions      Session[]
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       Int
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+enum Role {
+  ADMINISTRATOR
+  DEVELOPER
+  VIEWER
+}
+
+enum Status {
+  PENDING
+  APPROVED
+  REJECTED
+}

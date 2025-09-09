@@ -1,0 +1,47 @@
+{
+    "title": "AI-Driven SDLC",
+    "description": "Intelligent LLM-based SDLC to migrate source code from legacy to modern languages and frameworks using a multi-agent system.",
+    "author": "David & Jefferson",
+    "linkDesc": "View Demo",
+    "isExternal": false,
+    "isNew": true,
+    "isFeatured": true,
+    "image": "sdlc",
+    "categoryTags": ["AI", "Development", "Enterprise IT", "DevOps"],
+    "maturityStage": "Beta",
+    "interactivityLevel": "Interactive",
+    "estimatedExploreTime": "30 min",
+    "targetPersonas": ["Developers", "Product Managers", "IT Leaders"],
+    "displayPriority": 3,
+    "keyMetrics": {
+      "filesIdentifiedCorrectly": "90%",
+      "analysisTimeReduction": "30%",
+      "developmentTimeReduction": "30%",
+      "documentationQuality": "75% improvement",
+      "migrationPlanningTimeReduction": "50%",
+      "codeQuality": "Being Evaluated",
+      "migrationTimeReduction": "Being Evaluated"
+    },
+    "businessImpact": {
+      "operational": [
+        "Accelerated development timelines through automated code generation and documentation",
+        "Improved code quality and consistency across development teams",
+        "Knowledge preservation and sharing through comprehensive documentation",
+        "Reduced onboarding time for new developers joining projects"
+      ],
+      "customer": [
+        "Faster migration of legacy codebases to modern architectures",
+        "Reduced time spent documenting complex systems"
+      ]
+    },
+    "technicalHighlights": [
+      "AI-powered code analysis and quality assessment",
+      "Automated code documentation and migration planning",
+      "Human-in-the-loop for review and feedback",
+      "Flexible documentation format support (Markdown or Doxygen)",
+      "End-to-end migration of legacy codebases",
+      "Hybrid multi-agent workflow"
+    ],
+    "content": ""
+  }
+    

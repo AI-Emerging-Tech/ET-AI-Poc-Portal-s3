@@ -1,0 +1,415 @@
+/* DataModal Component styles */
+.data-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.data-modal {
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 80vw;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Dark mode styling */
+.dark-mode-ams .data-modal {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+.data-modal-header {
+  padding: 1.25rem;
+  background-color: #f7fafc;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.data-modal-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #4a5568;
+}
+
+.data-modal-content {
+  padding: 1.25rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Dark mode header styling */
+.dark-mode-ams .data-modal-header {
+  background-color: var(--header-bg);
+  border-bottom-color: var(--border-color);
+}
+
+.dark-mode-ams .data-modal-header h2 {
+  color: var(--heading-color);
+}
+
+.dark-mode-ams .close-button {
+  color: var(--text-color);
+}
+
+.dark-mode-ams .close-button:hover {
+  color: var(--accent-color);
+}
+
+.view-tabs {
+  display: flex;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.view-tabs .tab-button {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  color: #4a5568;
+  transition: all 0.2s ease;
+}
+
+.view-tabs .tab-button:hover {
+  color: #3182ce;
+}
+
+.view-tabs .tab-button.active {
+  color: #3182ce;
+  border-bottom-color: #3182ce;
+}
+
+.data-display {
+  position: relative;
+}
+
+.data-display pre {
+  margin: 0;
+  padding: 1rem;
+  overflow: auto;
+}
+
+/* Dark mode tab styling */
+.dark-mode-ams .view-tabs {
+  border-bottom-color: var(--border-color);
+}
+
+.dark-mode-ams .view-tabs .tab-button {
+  color: var(--subtext-color);
+}
+
+.dark-mode-ams .view-tabs .tab-button:hover {
+  color: var(--accent-color);
+}
+
+.dark-mode-ams .view-tabs .tab-button.active {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+/* Dark mode data display */
+.dark-mode-ams .data-display pre {
+  color: var(--text-color);
+}
+
+.data-modal-actions {
+  padding: 1rem 1.25rem;
+  background-color: #f7fafc;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Collapsible section styles */
+.collapsible-header, 
+.collapsible-group-header {
+  transition: background-color 0.2s ease;
+}
+
+.collapsible-header:hover, 
+.collapsible-group-header:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Dark mode styles for DataModal */
+.dark-mode-ams .data-modal {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+.dark-mode-ams .data-modal-header {
+  background-color: var(--header-bg);
+  border-bottom-color: var(--border-color);
+}
+
+.dark-mode-ams .data-modal-header h2 {
+  color: var(--heading-color);
+}
+
+.dark-mode-ams .close-button {
+  color: var(--text-color);
+}
+
+.dark-mode-ams .view-tabs {
+  border-bottom-color: var(--border-color);
+}
+
+.dark-mode-ams .view-tabs .tab-button {
+  color: var(--subtext-color);
+}
+
+.dark-mode-ams .view-tabs .tab-button:hover,
+.dark-mode-ams .view-tabs .tab-button.active {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.dark-mode-ams .data-display pre {
+  background-color: var(--code-bg);
+  color: var(--text-color);
+}
+
+.dark-mode-ams .data-modal-actions {
+  background-color: var(--header-bg);
+  border-top-color: var(--border-color);
+}
+
+/* Dark mode for formatted data display - scoped to data-modal */
+.dark-mode-ams .data-modal .bg-gray-50 {
+  background-color: var(--code-bg);
+}
+
+.dark-mode-ams .data-modal .text-gray-700 {
+  color: var(--text-color);
+}
+
+.dark-mode-ams .data-modal .text-gray-500 {
+  color: var(--subtext-color);
+}
+
+.dark-mode-ams .data-modal .text-blue-800 {
+  color: #90cdf4;
+}
+
+.dark-mode-ams .data-modal .text-blue-600 {
+  color: #63b3ed;
+}
+
+.dark-mode-ams .data-modal .text-indigo-600 {
+  color: #a3bffa;
+}
+
+.dark-mode-ams .data-modal .text-indigo-700 {
+  color: #b4c6fc;
+}
+
+.dark-mode-ams .data-modal .text-green-700 {
+  color: #9ae6b4;
+}
+
+.dark-mode-ams .data-modal .bg-blue-100 {
+  background-color: rgba(66, 153, 225, 0.2);
+}
+
+.dark-mode-ams .data-modal .border-gray-100 {
+  border-color: var(--border-color);
+}
+
+.dark-mode-ams .data-modal .hover\:bg-gray-50:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode-ams .data-modal .bg-green-100 {
+  background-color: rgba(56, 161, 105, 0.2);
+}
+
+.dark-mode-ams .data-modal .text-green-800 {
+  color: #9ae6b4;
+}
+
+.dark-mode-ams .data-modal .bg-red-100 {
+  background-color: rgba(229, 62, 62, 0.2);
+}
+
+.dark-mode-ams .data-modal .text-red-800 {
+  color: #feb2b2;
+}
+
+/* Dark mode for collapsible headers */
+.dark-mode-ams .collapsible-header:hover, 
+.dark-mode-ams .collapsible-group-header:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Migration Plan View Dark Mode Styles */
+/* Container styling */
+.dark-mode-ams .migration-plan-view {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Header area */
+.dark-mode-ams .migration-plan-view .flex.items-center.justify-between {
+  background-color: var(--header-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+.dark-mode-ams .migration-plan-view h3.text-lg.font-semibold.text-gray-800,
+.dark-mode-ams .migration-plan-view .text-sm.text-gray-600 {
+  color: var(--text-color) !important;
+}
+
+/* Requirement Cards */
+.dark-mode-ams .migration-plan-view .mb-4.border.border-gray-200 {
+  border-color: var(--border-color) !important;
+  background-color: transparent !important;
+}
+
+/* Requirement Headers */
+.dark-mode-ams .migration-plan-view .bg-blue-200 {
+  background-color: rgba(66, 153, 225, 0.3) !important;
+}
+
+.dark-mode-ams .migration-plan-view .bg-gray-50 {
+  background-color: var(--bg-color) !important;
+}
+
+/* Expanded requirement content */
+.dark-mode-ams .migration-plan-view .px-4.py-3.border-t.border-gray-200 {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Text colors */
+.dark-mode-ams .migration-plan-view .text-gray-800,
+.dark-mode-ams .migration-plan-view h4,
+.dark-mode-ams .migration-plan-view h5,
+.dark-mode-ams .migration-plan-view h6 {
+  color: var(--heading-color) !important;
+}
+
+.dark-mode-ams .migration-plan-view .text-gray-700,
+.dark-mode-ams .migration-plan-view p {
+  color: var(--text-color) !important;
+}
+
+.dark-mode-ams .migration-plan-view .text-gray-500,
+.dark-mode-ams .migration-plan-view .text-gray-600 {
+  color: var(--subtext-color) !important;
+}
+
+/* Category badge */
+.dark-mode-ams .migration-plan-view .bg-blue-100.text-blue-800 {
+  background-color: rgba(66, 153, 225, 0.2) !important;
+  color: #90cdf4 !important;
+}
+
+/* Dependencies badges */
+.dark-mode-ams .migration-plan-view .bg-gray-100.text-gray-700 {
+  background-color: rgba(160, 174, 192, 0.2) !important;
+  color: var(--text-color) !important;
+}
+
+/* User Story Section */
+.dark-mode-ams .migration-plan-view .border.border-gray-200.rounded {
+  border-color: var(--border-color) !important;
+}
+
+/* User Story Headers */
+.dark-mode-ams .migration-plan-view .bg-green-50 {
+  background-color: rgba(56, 161, 105, 0.2) !important;
+}
+
+.dark-mode-ams .migration-plan-view .bg-green-500 {
+  background-color: var(--success-color) !important;
+}
+
+/* Task items */
+.dark-mode-ams .migration-plan-view .border.border-gray-100.rounded.p-2 {
+  background-color: rgba(45, 55, 72, 0.5) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Files badge */
+.dark-mode-ams .migration-plan-view .bg-purple-100.text-purple-800 {
+  background-color: rgba(159, 122, 234, 0.2) !important;
+  color: #d6bcfa !important;
+}
+
+/* Files to work on tags */
+.dark-mode-ams .migration-plan-view .bg-purple-50.text-purple-800 {
+  background-color: rgba(159, 122, 234, 0.3) !important;
+  color: #d6bcfa !important;
+  border-color: rgba(159, 122, 234, 0.4) !important;
+}
+
+/* Toggle indicators */
+.dark-mode-ams .migration-plan-view .bg-gray-200.text-gray-600 {
+  background-color: var(--button-bg) !important;
+  color: var(--text-color) !important;
+}
+
+/* Lists */
+.dark-mode-ams .migration-plan-view ul.list-disc,
+.dark-mode-ams .migration-plan-view ol.list-decimal {
+  color: var(--text-color) !important;
+}
+
+/* Empty states */
+.dark-mode-ams .migration-plan-view .text-gray-500.italic {
+  color: var(--subtext-color) !important;
+  font-style: italic;
+}
+
+/* Active requirement and user story states */
+.dark-mode-ams .migration-plan-view .rounded-full.bg-blue-500.text-white {
+  background-color: var(--accent-color) !important;
+  color: white !important;
+}
+
+.dark-mode-ams .migration-plan-view .rounded-full.bg-green-500.text-white {
+  background-color: var(--success-color) !important;
+  color: white !important;
+}
+
+/* Improve transitions */
+.dark-mode-ams .migration-plan-view * {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
