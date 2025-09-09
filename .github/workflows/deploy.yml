@@ -113,32 +113,32 @@ jobs:
 #   - image-push
 #   - deploy
 
-build:      # Stage 1: Build the project
-  stage: build
-  image: node
-  script: 
-    - echo "Start building App"
-    - npm install       # Install dependencies
-    - npm run build     # Build the project
-    - echo "Build successfully!"
-  artifacts:
-    paths:
-      - build/    # Path to the build output
+# build:      # Stage 1: Build the project
+#   stage: build
+#   image: node
+#   script: 
+#     - echo "Start building App"
+#     - npm install       # Install dependencies
+#     - npm run build     # Build the project
+#     - echo "Build successfully!"
+#   artifacts:
+#     paths:
+#       - build/    # Path to the build output
 
     
-  image-push-docker:       # Stage 3-b: Build the docker image and push it to Docker Hub
-  stage: image-push
-  image: docker:latest
-  services: 
-    - name: docker:20.10.17-dind
-  script:
-    - docker build -t react .
-    - docker login -u="${DOCKERHUB_LOGIN}" -p="${DOCKERHUB_PASS}"
-    - docker image tag react:latest ${DOCKERHUB_LOGIN}/react:latest
-    - docker image push ${DOCKERHUB_LOGIN}/react:latest
-    - echo "Contain has been built successfuly and pushed to Docker Hub"
-  dependencies:
-    - test
+#   image-push-docker:       # Stage 3-b: Build the docker image and push it to Docker Hub
+#   stage: image-push
+#   image: docker:latest
+#   services: 
+#     - name: docker:20.10.17-dind
+#   script:
+#     - docker build -t react .
+#     - docker login -u="${DOCKERHUB_LOGIN}" -p="${DOCKERHUB_PASS}"
+#     - docker image tag react:latest ${DOCKERHUB_LOGIN}/react:latest
+#     - docker image push ${DOCKERHUB_LOGIN}/react:latest
+#     - echo "Contain has been built successfuly and pushed to Docker Hub"
+#   dependencies:
+#     - test
 
 # # Stage 4-a: Deploy the app to AWS S3
 # s3-deployment: 
