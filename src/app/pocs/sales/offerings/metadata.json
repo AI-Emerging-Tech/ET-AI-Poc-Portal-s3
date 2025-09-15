@@ -1,0 +1,21 @@
+{
+  "title": "VM Offerings Chat",
+  "description": "This PoC provides a chat interface that uses LlamaIndex and LangChain for a RAG based chatbot fed with Offering documents for context.",
+  "author": "Osama & Quinten", 
+  "linkDesc": "View Demo",
+  "isExternal": false,
+  "isNew": false,
+  "isFeatured": false,
+  "interactivityLevel": "Interactive",
+  "maturityStage": "Experiment",
+  "estimatedExploreTime": "5 min",
+  "targetPersonas": ["Business Users", "Sales Representatives", "Client Service Representatives"],
+  "image": "chatbot",
+  "industryVerticals": ["Enterprise", "Sales", "Marketing", "Client Service"],
+  "technicalHighlights": [
+    "Retrieval Augmented Generation (RAG)",
+    "LlamaIndex",
+    "LangChain"
+  ],
+  "content": "The VM Offerings Chat is an intelligent conversational interface that allows business users to easily access information about Value Momentum's service offerings without having to search through extensive documentation. This solution leverages advanced AI technologies through a Retrieval Augmented Generation (RAG) approach, which combines the power of large language models with a knowledge base of VM's offering documents.\n\nHow it works:\n\n1. When you ask a question, the system searches through a database of VM's offering documents to find the most relevant information.\n\n2. The system uses two different AI frameworks (LlamaIndex and LangChain) to process your query and retrieve the most accurate information.\n\n3. The AI then generates a comprehensive, contextually relevant response based on the retrieved information rather than just general knowledge.\n\n4. The system maintains conversation history, allowing for follow-up questions and a more natural dialogue experience.\n\nBusiness Benefits:\n\n- Instant access to accurate information about VM's offerings\n- Consistent messaging about services across the organization\n- Reduced time spent searching through documentation\n- Ability to quickly answer client questions with authoritative information\n- Improved knowledge sharing and accessibility for all team members\n\nThis solution demonstrates how AI can be practically applied to improve internal knowledge management and client communications."
+}

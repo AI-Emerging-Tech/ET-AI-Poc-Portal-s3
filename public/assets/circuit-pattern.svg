@@ -1,0 +1,60 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <!-- Horizontal Lines -->
+    <path d="M 10 40 L 150 40" />
+    <path d="M 180 40 L 390 40" />
+    <path d="M 10 100 L 70 100" />
+    <path d="M 100 100 L 250 100" />
+    <path d="M 280 100 L 390 100" />
+    <path d="M 10 160 L 90 160" />
+    <path d="M 120 160 L 270 160" />
+    <path d="M 300 160 L 390 160" />
+    <path d="M 10 220 L 50 220" />
+    <path d="M 80 220 L 190 220" />
+    <path d="M 220 220 L 390 220" />
+    <path d="M 10 280 L 130 280" />
+    <path d="M 160 280 L 310 280" />
+    <path d="M 340 280 L 390 280" />
+    <path d="M 10 340 L 190 340" />
+    <path d="M 220 340 L 390 340" />
+    
+    <!-- Vertical Lines -->
+    <path d="M 40 10 L 40 130" />
+    <path d="M 40 160 L 40 390" />
+    <path d="M 100 10 L 100 70" />
+    <path d="M 100 100 L 100 180" />
+    <path d="M 100 210 L 100 390" />
+    <path d="M 160 10 L 160 250" />
+    <path d="M 160 280 L 160 390" />
+    <path d="M 220 10 L 220 150" />
+    <path d="M 220 180 L 220 340" />
+    <path d="M 220 370 L 220 390" />
+    <path d="M 280 10 L 280 100" />
+    <path d="M 280 130 L 280 210" />
+    <path d="M 280 240 L 280 390" />
+    <path d="M 340 10 L 340 280" />
+    <path d="M 340 310 L 340 390" />
+    
+    <!-- Connection Nodes -->
+    <circle cx="40" cy="40" r="3" fill="currentColor" />
+    <circle cx="100" cy="100" r="3" fill="currentColor" />
+    <circle cx="160" cy="160" r="3" fill="currentColor" />
+    <circle cx="220" cy="220" r="3" fill="currentColor" />
+    <circle cx="280" cy="100" r="3" fill="currentColor" />
+    <circle cx="340" cy="280" r="3" fill="currentColor" />
+    <circle cx="160" cy="280" r="3" fill="currentColor" />
+    <circle cx="220" cy="340" r="3" fill="currentColor" />
+    <circle cx="40" cy="160" r="3" fill="currentColor" />
+    <circle cx="100" cy="220" r="3" fill="currentColor" />
+    
+    <!-- Small Connection Nodes -->
+    <circle cx="70" cy="100" r="2" fill="currentColor" />
+    <circle cx="90" cy="160" r="2" fill="currentColor" />
+    <circle cx="130" cy="280" r="2" fill="currentColor" />
+    <circle cx="190" cy="220" r="2" fill="currentColor" />
+    <circle cx="190" cy="340" r="2" fill="currentColor" />
+    <circle cx="270" cy="160" r="2" fill="currentColor" />
+    <circle cx="310" cy="280" r="2" fill="currentColor" />
+    <circle cx="150" cy="40" r="2" fill="currentColor" />
+  </g>
+</svg> 

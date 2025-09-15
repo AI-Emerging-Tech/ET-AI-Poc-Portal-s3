@@ -1,0 +1,43 @@
+{
+  "title": "AI Powered FNOL Voice Assistant",
+  "description": "This PoC demonstrates a complete voice-to-voice interface for First Notice of Loss (FNOL) claim reporting. Users can interact naturally through speech with an AI assistant that guides them through the claim reporting process, collects necessary information, and provides real-time responses through advanced speech synthesis.",
+  "author": "Jefferson Nelsson, AI Team",
+  "linkDesc": "Try Voice Assistant",
+  "isExternal": false,
+  "isNew": true,
+  "isFeatured": true,
+  "interactivityLevel": "Interactive",
+  "maturityStage": "Alpha", 
+  "estimatedExploreTime": "10 min",
+  "targetPersonas": ["Claims Adjusters", "Customer Service Representatives", "Policyholders", "Claims Supervisors"],
+  "image": "claims_idp",
+  "businessImpact": {
+    "operational": [
+      "24/7 automated FNOL intake",
+      "Reduced call center volume",
+      "Consistent data collection",
+      "Faster claim initiation"
+    ],
+    "customer": [
+      "Natural voice interaction",
+      "Immediate claim processing",
+      "Accessible for all users",
+      "Reduced wait times"
+    ]
+  },
+  "categoryTags": ["Real-time", "Voice AI", "STT", "TTS", "Claims", "FNOL", "Streaming"],
+  "implementationTimeline": {
+    "proofOfConcept": "3-4 weeks",
+    "pilotDeployment": "2-3 months", 
+    "fullImplementation": "4-6 months"
+  },
+  "technicalHighlights": [
+    "Complete voice pipeline: STT → Chat Agent → TTS",
+    "Real-time streaming with Server-Sent Events",
+    "Session continuity across voice interactions",
+    "Tool call filtering for clean voice experience",
+    "Sentence-by-sentence audio generation",
+    "Base64 audio streaming for immediate playback"
+  ],
+  "content": "Traditional FNOL (First Notice of Loss) processes require customers to navigate complex phone trees or fill out lengthy forms. This PoC showcases a revolutionary voice-first approach where customers can report claims naturally through conversation with an AI assistant. The system combines Speech-to-Text (STT), advanced conversational AI, and Text-to-Speech (TTS) in a seamless streaming pipeline. \n\nThe voice assistant guides users through the claim reporting process, asks clarifying questions, and provides immediate feedback - all through natural speech interaction. The streaming architecture ensures minimal latency, with audio responses beginning to play before the complete response is generated."
+}

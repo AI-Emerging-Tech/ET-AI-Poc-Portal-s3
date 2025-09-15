@@ -1,0 +1,31 @@
+{
+  "title": "Prospect Analysis",
+  "description": "Our custom deep research agent to assist Sales vertical analyze potential prospects using a multi-agent system and a wide array of knowledge bases.",
+  "author": "Jefferson Nelsson", 
+  "linkDesc": "View Demo",
+  "isExternal": false,
+  "image": "deepresearch",
+  "isFeatured": true,
+  "isNew": false,
+  "categoryTags": ["Deep Research", "Agentic AI"],
+  "maturityStage": "Alpha",
+  "interactivityLevel": "Interactive",
+  "estimatedExploreTime": "30-90 min",
+  "targetPersonas": ["Sales Representatives", "Sales Managers", "Sales Analysts"],
+  "industryVerticals": ["Enterprise", "Sales", "Marketing"],
+  "technicalHighlights": [
+    "Multi-agent systems",
+    "Knowledge graphs",
+    "Generative AI",
+    "Citation-based retrieval",
+    "Web scraping"
+  ],
+  "content": "",
+  "businessImpact": {
+    "operational": [
+      "Reduced time spent on prospect analysis",
+      "Improved prospect analysis accuracy",
+      "Increased sales productivity"
+    ]
+  }
+}

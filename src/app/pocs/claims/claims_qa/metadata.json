@@ -1,0 +1,41 @@
+{
+  "title": "AI Assisted Claims QA",
+  "description": "This PoC demonstrates AI-powered quality assurance for insurance claims processing. Users can simulate different claim scenarios and see how AI assists in quality review, anomaly detection, and decision validation to ensure accurate and consistent claims handling.",
+  "author": "Jefferson Nelsson, Dheeraj B, Quentin Holmes",
+  "linkDesc": "View Demo",
+  "isExternal": false,
+  "isNew": true,
+  "isFeatured": false,
+  "interactivityLevel": "Interactive",
+  "maturityStage": "Alpha",
+  "estimatedExploreTime": "8 min",
+  "targetPersonas": ["Claims QA Analysts", "Claims Supervisors", "Claims Managers", "Quality Assurance Teams"],
+  "image": "claims_idp",
+  "businessImpact": {
+    "operational": [
+      "Automated quality assurance checks",
+      "Reduced manual review time",
+      "Improved claims accuracy",
+      "Enhanced compliance monitoring"
+    ],
+    "customer": [
+      "Faster claims resolution",
+      "More consistent claim outcomes",
+      "Improved customer trust"
+    ]
+  },
+  "categoryTags": ["Real-time", "Event-driven", "AI", "Claims", "Quality Assurance"],
+  "implementationTimeline": {
+    "proofOfConcept": "2-4 weeks",
+    "pilotDeployment": "1-2 months",
+    "fullImplementation": "3-4 months"
+  },
+  "technicalHighlights": [
+    "Multi-agent system for claims quality assurance",
+    "Event-driven architecture for seamless integration",
+    "Real-time notification system for adjuster visibility",
+    "Scalable and customizable for different claim types",
+    "Under 10s response time from QA Agent to adjuster"
+  ],
+  "content": "Claims quality assurance traditionally requires extensive manual review of claim decisions, documentation, and processes. This PoC showcases how AI can automatically analyze claim scenarios, detect potential issues, and provide quality insights. The system simulates real-world claim scenarios with different loss types and provides AI-driven QA analysis to help ensure consistent, accurate, and compliant claims processing. \n\nIn production, when an action on a claim is taken by the adjuster, ECS should trigger an event that sends information to the QA Agent. The QA Agent's response should be sent back to ECS, and the adjuster should be able to see the QA Agent's response in the UI as a notification."
+}

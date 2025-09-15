@@ -1,0 +1,34 @@
+{
+    "title": "Intelligent Test Automation Platform (ITAP)",
+    "description": "Intelligent LLM-based solution for BDD Cucumber Scenario Generation and Playwright Script Generation with Azure DevOps integration.",
+    "author": "Jefferson",
+    "linkDesc": "View Demo",
+    "isExternal": false,
+    "isNew": true,
+    "isFeatured": true,
+    "image": "sdlc",
+    "categoryTags": ["AI", "Development", "Testing", "Enterprise IT", "DevOps"],
+    "maturityStage": "Alpha",
+    "interactivityLevel": "Interactive",
+    "estimatedExploreTime": "10 min",
+    "targetPersonas": ["Developers", "Testers", "QA Leads", "Product Managers", "IT Leaders"],
+    "displayPriority": 3,
+    "businessImpact": {
+      "operational": [
+        "Accelerated testing and development cycles",
+        "Reduced manual effort in test case creation",
+        "Improved collaboration between development and testing teams"
+      ],
+      "customer": [
+        "Enhanced customer satisfaction through faster feature delivery",
+        "Increased reliability and performance of applications through improved code quality"
+      ]
+    },
+    "technicalHighlights": [
+      "AI-powered user story analysis",
+      "Smart BDD Scenario Generation",
+      "Automated Playwright Script Generation"
+    ],
+    "content": ""
+  }
+    

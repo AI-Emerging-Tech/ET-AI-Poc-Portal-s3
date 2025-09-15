@@ -1,0 +1,33 @@
+{
+  "title": "Incident Summarization",
+  "description": "This PoC demonstrates the summarization of IT incidents exported from from ServiceNow using a combination of traditional ML and Generative AI.",
+  "author": "David Kuhn", 
+  "linkDesc": "View Demo",
+  "isExternal": false,
+  "image": "summarization",
+  "isFeatured": false,
+  "categoryTags": ["AI", "Machine Learning", "Claims Processing", "Document Analysis"],
+  "maturityStage": "Alpha",
+  "interactivityLevel": "Limited",
+  "estimatedExploreTime": "5-10 min",
+  "targetPersonas": ["IT support", "IT managers", "IT analysts"],
+  "industryVerticals": ["Enterprise IT"],
+  "isNew": false,
+  "businessImpact": {
+    "operational": [
+      "Reduced time spent on incident management",
+      "Improved incident resolution",
+      "Increased customer satisfaction"
+    ],
+    "customer": [
+      "Faster resolution of incidents",
+      "Improved customer support"
+    ]
+  },
+  "technicalHighlights": [
+    "Traditional ML for feature extraction and clustering",
+    "Generative AI for classification and summarization",
+    "Pattern recognition and anomaly detection"
+  ],
+  "content": ""
+}

@@ -1,0 +1,19 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    // Disable no-unescaped-entities rule (for quotes)
+    "react/no-unescaped-entities": "off",
+
+    // Disable unused variable warnings
+    "@typescript-eslint/no-unused-vars": "off",
+
+    // Disable any type warnings
+    "@typescript-eslint/no-explicit-any": "off",
+
+    // Disable warnings for using <img> instead of next/image
+    "@next/next/no-img-element": "off",
+
+    // Disable 'prefer-const' rule
+    "prefer-const": "off"
+  }
+}

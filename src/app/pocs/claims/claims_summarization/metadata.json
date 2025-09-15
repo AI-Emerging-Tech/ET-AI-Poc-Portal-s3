@@ -1,0 +1,26 @@
+{
+  "title": "Claims Summarization",
+  "description": "This PoC demonstrates the summarization of insurance claims using AI models. Adjusters can upload documents (Loss Reports, Policy Documents, Medical Reports, Repair Estimates, Legal Documents) and receive concise summaries, reducing review time and improving efficiency.",
+  "author": "David Kuhn",
+  "linkDesc": "View Demo",
+  "isExternal": false,
+  "isNew": false,
+  "isFeatured": false,
+  "interactivityLevel": "Interactive",
+  "maturityStage": "Alpha",
+  "estimatedExploreTime": "5 min",
+  "targetPersonas": ["Claims Adjusters", "Claims Analysts", "Claims Managers"],
+  "image": "summarization",
+  "businessImpact": {
+    "operational": [
+      "Reduced document review time",
+      "Increased operational efficiency",
+      "Shortened claims cycle times"
+    ],
+    "customer": [
+      "Improved customer satisfaction",
+      "Faster claims resolution"
+    ]
+  },
+  "content": "Claims adjusters spend significant time manually reviewing lengthy and complex documents, which slows down claims resolution and increases operational costs. This PoC introduces an AI-powered solution that automatically summarizes key insurance documents—such as Loss Reports, Policy Documents, Medical Reports, and Legal Opinions—enabling adjusters to quickly grasp the most important information and make faster, more informed decisions using Generative AI several chunking strategies to retain information over 100s of pages."
+}

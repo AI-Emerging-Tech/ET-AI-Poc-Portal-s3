@@ -1,0 +1,31 @@
+{
+  "title": "Crop insurance Automation",
+  "description": "This PoC demonstrates the classification of crop insurance claims using scientific approaches and AI. It leverages geospatial imagery, machine learning, and weather analytics to automate and accelerate claims assessment, reduce manual errors, and detect fraud.",
+  "author": "Jefferson Nelsson",
+  "linkDesc": "View Demo",
+  "isExternal": false,
+  "isNew": false,
+  "isFeatured": false,
+  "interactivityLevel": "Guided",
+  "maturityStage": "Alpha",
+  "estimatedExploreTime": "5 min",
+  "targetPersonas": ["Claims Adjusters", "Claims Analysts", "Claims Managers"],
+  "image": "claims_idp",
+  "businessImpact": {
+    "operational": [
+      "Significantly reduced time to process crop damage claims",
+      "Real-time damage assessments in under 5 minutes",
+      "Reduced manual errors and operational costs"
+    ],
+    "customer": [
+      "Faster resolution for insurer and insuree"
+    ]
+  },
+  "technicalHighlights": [
+    "GeoSpatial imagery analysis using Sentinel-2 Satellite",
+    "CNN-based binary classification and Vision Transformer for image analysis",
+    "Image segmentation with YOLOv8",
+    "Weather analytics for risk indices (fire, drought, pest, disease, flood, wind, storm)"
+  ],
+  "content": "This PoC automates crop insurance claims processing by combining geospatial imagery, advanced machine learning, and weather analytics. The system classifies crop damage, assesses risk, and generates real-time assessments, improving efficiency and accuracy for adjusters. Crop damage is assessed as follows:\n1. Image analysis: The system uses a combination of CNN-based binary classification and Vision Transformer for image analysis. It first identifies the crop type and damage type, then classifies the damage severity. The system also uses image segmentation with YOLOv8 to identify the affected areas.\n2. Weather analysis: The system uses weather analytics to assess the risk of fire, drought, pest, disease, flood, wind, and storm by calculating metrics and indices to determine the likelihood of the weather event claimed.\n3. Geospatial analysis: The system uses geospatial analysis to identify the location of the damage and the affected areas. It uses the Sentinel-2 satellite imagery to calculate spectral indices and other metrics to determine the severity of the damage."
+}

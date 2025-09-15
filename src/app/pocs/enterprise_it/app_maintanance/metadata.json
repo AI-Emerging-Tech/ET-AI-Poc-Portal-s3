@@ -1,0 +1,16 @@
+{
+  "title": "Automated App Maintenance",
+  "description": "This PoC combined Issue Triage, Pull Request Review, App Monitoring using Agentic Workflow.",
+  "author": "Jefferson Nelsson",
+  "linkDesc": "View Demo",
+  "isExternal": false,
+  "image": "sdlc",
+  "isFeatured": false,
+  "isNew": false,
+  "categoryTags": ["AI", "Agentic AI", "Codebase Review", "Pull Request Review", "Codebase Documentation", "Architecture Diagram Analysis", "Unit Test Generation"],
+  "maturityStage": "Experiment",
+  "interactivityLevel": "Limited",
+  "estimatedExploreTime": "10-20 min",
+  "targetPersonas": ["Software Engineers", "DevOps Engineers", "QA Engineers"]
+}
+  

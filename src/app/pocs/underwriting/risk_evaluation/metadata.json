@@ -1,0 +1,29 @@
+{
+  "title": "Underwriting Risk Evaluation",
+  "description": "Underwriting Risk Evaluation is a Multi-Agent System that uses various tools and agents to analyze, validate and evaluate a submission.",
+  "author": "Jefferson", 
+  "linkDesc": "View Demo",
+  "isExternal": false,
+  "isNew": true,
+  "isFeatured": true,
+  "image": "underwriting",
+  "categoryTags": ["AI", "Agent", "Underwriting", "Risk Assessment"],
+  "maturityStage": "Beta",
+  "interactivityLevel": "Interactive",
+  "estimatedExploreTime": "8 min",
+  "targetPersonas": ["Underwriters", "Risk Managers", "Actuaries", "Producers"],
+  "displayPriority": 2,
+  "keyMetrics": {
+    "riskAssessmentAccuracy": "75%", 
+    "timeToQuote": "60% faster"
+  },
+  "industryVerticals": ["Underwriting"],
+  "technicalHighlights": [
+    "Multi-agent systems",
+    "Sufficiency validation",
+    "Document analysis",
+    "Document ingestion",
+    "RAG for underwriting guidelines"
+  ],
+  "content": "The Underwriting Risk Evaluation PoC demonstrates an agent-based approach to evaluating insurance risks more accurately and efficiently. By combining traditional actuarial methods with advanced AI, this solution provides underwriters with deeper insights and recommendations.\n\nHow it works:\n\n1. The system ingests policy application data, including structured fields and unstructured documents.\n\n2. Multiple specialized AI agents analyze different aspects of the application and validate the sufficiency of the application.\n\n3. Underwriting guidelines are retrieved using RAG from a knowledge base of underwriting guidelines.\n\n4. The final evaluation is presented in an evidence-based report."
+}
