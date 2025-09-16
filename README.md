@@ -16,3 +16,5 @@ bun dev
 
 add .env file:
 USE_MOCK_SERVICE=false
+
+# testing
